@@ -1,7 +1,5 @@
 package com.bugai.leetcode;
 
-import java.util.Vector;
-
 /**
  * Given numRows, generate the first numRows of Pascal’s triangle.
  * <p>
