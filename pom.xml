@@ -22,6 +22,8 @@
     <module>java-algorithms-binary-search-tree</module>
     <module>01-java-algorithms-two-sum</module>
     <module>leetcode</module>
+    <module>think-in-java</module>
+    <module>java-tutorial</module>
   </modules>
 
   <dependencies>
