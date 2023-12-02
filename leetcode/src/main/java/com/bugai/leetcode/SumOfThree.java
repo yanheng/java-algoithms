@@ -1,7 +1,6 @@
 package com.bugai.leetcode;
 
-import java.util.Iterator;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * Given an array S of n integers, are there elements a, b, c in S such that a + b + c = 0?
@@ -31,16 +30,47 @@ public class SumOfThree {
     return vector;
   }
 
+  public static List<List<Integer>> threeSum(int[] nums) {
+
+    List<List<Integer>> result = new ArrayList<>();
+    for (int i = 0; i < nums.length; i++) {
+      for (int j = i + 1; j < nums.length; j++) {
+        for (int k = j + 1; k < nums.length; k++) {
+          if ((nums[i] + nums[j] + nums[k]) == 0) {
+            List<Integer> item = new ArrayList<>();
+            item.add(i);
+            item.add(j);
+            item.add(k);
+            result.add(item);
+          }
+        }
+      }
+    }
+    return result;
+  }
+
   public static void main(String[] args) {
-    int [] arr = {0, 1, -1, 2, -2, 3, 0, 5};
-    Vector vector = SumOfThree.sumEqZero(arr);
-    Iterator iterator = vector.iterator();
+    //    int[] arr = {0, 1, -1, 2, -2, 3, 0, 5};
+    //    Vector vector = SumOfThree.sumEqZero(arr);
+    //    Iterator iterator = vector.iterator();
+    //    while (iterator.hasNext()) {
+    //      int[] next = (int[]) iterator.next();
+    //      for (int i = 0; i < next.length; i++) {
+    //        System.out.print(next[i] + ",");
+    //      }
+    //      System.out.println();
+    //    }
+
+    int[] arr = {-1, 0, 1, 2, -1, -4};
+    List<List<Integer>> lists = threeSum(arr);
+    Iterator<List<Integer>> iterator = lists.iterator();
     while (iterator.hasNext()) {
-      int[] next = (int[])iterator.next();
-      for (int i = 0; i < next.length; i++) {
-        System.out.print(next[i] + ",");
+      List<Integer> next = iterator.next();
+      for (int i = 0; i < next.size(); i++) {
+        System.out.print(next.get(i) + ",");
       }
       System.out.println();
     }
+
   }
 }
