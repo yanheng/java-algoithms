@@ -14,8 +14,8 @@ import java.util.List;
 import java.util.Set;
 
 
-@SupportedAnnotationTypes("com.think.in.java.chapter20.demo03.ExtractInterface")
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
+//@SupportedAnnotationTypes("com.think.in.java.chapter20.demo03.ExtractInterface")
+//@SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class InterfaceExtractorProcessor extends AbstractProcessor {
 
   @Override

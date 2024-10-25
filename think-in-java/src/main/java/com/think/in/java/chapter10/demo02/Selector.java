@@ -7,4 +7,5 @@ public interface Selector {
 
   void next();
 
+
 }

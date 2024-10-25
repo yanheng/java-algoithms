@@ -24,6 +24,7 @@
     <module>leetcode</module>
     <module>think-in-java</module>
     <module>java-tutorial</module>
+    <module>my-annotation-handler</module>
   </modules>
 
   <dependencies>
@@ -80,8 +81,23 @@
           <compilerVersion>1.8</compilerVersion>
           <source>1.8</source>
           <target>1.8</target>
-          <compilerArgument>-proc:none</compilerArgument>
+          <!--          <compilerArgument>-proc:none</compilerArgument>-->
         </configuration>
+        <executions>
+          <execution>
+            <id>default-compile</id>
+            <configuration>
+              <compilerArgument>-proc:none</compilerArgument>
+            </configuration>
+          </execution>
+          <execution>
+            <id>compile-project</id>
+            <phase>compile</phase>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
       <plugin>
